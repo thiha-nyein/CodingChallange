@@ -31,3 +31,19 @@ run(gcd,255,100)
 
 # Recursion
 run(re_gcd,255,100)
+
+mylist = [81,132,405,99]
+def m_gcd(a):
+    while len(a)>1:
+        print(a)
+        ans = set()
+        m = min(a)
+        for i in a:
+            if i==m:
+                ans.add(i)
+            if i%m:
+                ans.add(i%m)
+        a = ans.copy()
+    return a
+
+m_gcd(mylist)
